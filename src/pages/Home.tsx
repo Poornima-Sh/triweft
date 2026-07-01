@@ -112,7 +112,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
             </motion.div>
           </div>
 
-          {/* Hero Right: Interactive Transforming Textile SVG */}
+          {/* Hero Right: Premium White Shirt Showcase */}
           <motion.div
             variants={itemVariants}
             style={{
@@ -124,109 +124,75 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
               justifyContent: 'center',
             }}
           >
-            {/* Soft decorative background circles */}
+            {/* Soft decorative background glow */}
             <div style={{
               position: 'absolute',
-              width: '80%',
-              height: '80%',
+              width: '85%',
+              height: '85%',
               borderRadius: '50%',
-              background: 'radial-gradient(circle, rgba(122, 31, 43, 0.05) 0%, rgba(214, 160, 23, 0.02) 60%, transparent 100%)',
-              filter: 'blur(20px)',
+              background: 'radial-gradient(circle, rgba(255, 194, 25, 0.08) 0%, rgba(255, 83, 61, 0.03) 60%, transparent 100%)',
+              filter: 'blur(30px)',
               zIndex: 0
             }}></div>
 
-            <motion.svg
-              viewBox="0 0 400 400"
-              style={{ width: '90%', height: '90%', zIndex: 1, overflow: 'visible' }}
-              animate={{ rotate: 360 }}
-              transition={{ repeat: Infinity, duration: 80, ease: 'linear' }}
+            {/* Premium Framed Image */}
+            <motion.div
+              style={{
+                position: 'relative',
+                width: '85%',
+                height: '85%',
+                borderRadius: '24px',
+                overflow: 'hidden',
+                border: '1px solid rgba(255, 255, 255, 0.25)',
+                boxShadow: '0 20px 50px rgba(30, 42, 56, 0.15)',
+                zIndex: 1,
+                backgroundColor: 'rgba(255, 255, 255, 0.5)',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+              }}
+              animate={{
+                y: [0, -12, 0]
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 6,
+                ease: 'easeInOut'
+              }}
+              whileHover={{
+                scale: 1.02,
+                boxShadow: '0 30px 60px rgba(30, 42, 56, 0.25)'
+              }}
             >
-              {/* Outer delicate orbits */}
-              <circle cx="200" cy="200" r="180" fill="none" stroke="rgba(30, 42, 56, 0.06)" strokeWidth="1" strokeDasharray="5 5" />
-              <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(255, 83, 61, 0.08)" strokeWidth="1" />
-              <circle cx="200" cy="200" r="100" fill="none" stroke="rgba(255, 194, 25, 0.12)" strokeWidth="1.5" strokeDasharray="10 15" />
-
-              {/* The "Triweft" Warp & Weft Morphed Gown/Suit wires */}
-              <g>
-                {[...Array(12)].map((_, index) => {
-                  const angle = (index / 12) * Math.PI * 2;
-                  const x1 = 200 + Math.cos(angle) * 140;
-                  const y1 = 200 + Math.sin(angle) * 140;
-                  const cp1x = 200 + Math.cos(angle + 0.5) * 80;
-                  const cp1y = 200 + Math.sin(angle + 0.5) * 80;
-                  const cp2x = 200 + Math.cos(angle - 0.5) * 50;
-                  const cp2y = 200 + Math.sin(angle - 0.5) * 50;
-                  
-                  return (
-                    <motion.path
-                      key={index}
-                      d={`M 200 200 C ${cp2x} ${cp2y}, ${cp1x} ${cp1y}, ${x1} ${y1}`}
-                      fill="none"
-                      stroke={index % 3 === 0 ? '#FF533D' : index % 3 === 1 ? '#35A7DF' : '#FFC219'}
-                      strokeWidth={index % 3 === 2 ? 1.5 : 1}
-                      opacity="0.5"
-                      animate={{
-                        d: [
-                          `M 200 200 C ${cp2x} ${cp2y}, ${cp1x} ${cp1y}, ${x1} ${y1}`,
-                          `M 200 200 C ${cp2x * 1.1} ${cp2y * 0.9}, ${cp1x * 0.9} ${cp1y * 1.1}, ${200 + Math.cos(angle + 0.2) * 140} ${200 + Math.sin(angle + 0.2) * 140}`,
-                          `M 200 200 C ${cp2x} ${cp2y}, ${cp1x} ${cp1y}, ${x1} ${y1}`
-                        ]
-                      }}
-                      transition={{
-                        repeat: Infinity,
-                        duration: 8 + (index % 4) * 2,
-                        ease: 'easeInOut'
-                      }}
-                    />
-                  );
-                })}
-              </g>
-
-              {/* Central morphing shape node representing Fashion transforming */}
-              <motion.path
-                d="M 150 180 Q 200 130 250 180 T 200 300 Z"
-                fill="url(#goldBurgundyGrad)"
-                opacity="0.15"
-                animate={{
-                  d: [
-                    "M 150 180 Q 200 130 250 180 T 200 300 Z",
-                    "M 140 190 Q 200 110 260 190 T 200 310 Z",
-                    "M 160 170 Q 200 150 240 170 T 200 290 Z",
-                    "M 150 180 Q 200 130 250 180 T 200 300 Z"
-                  ]
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 12,
-                  ease: 'easeInOut'
+              <img
+                src="/lookbook_white_shirt.png"
+                alt="Triweft Sovereign White Shirt"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  display: 'block'
                 }}
               />
-
-              {/* Decorative nodes */}
-              <motion.circle 
-                cx="200" cy="130" r="4" fill="#FFC219"
-                animate={{ scale: [1, 1.5, 1] }} 
-                transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-              />
-              <motion.circle 
-                cx="150" cy="180" r="3" fill="#FF533D" 
-                animate={{ scale: [1.3, 1, 1.3] }} 
-                transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
-              />
-              <motion.circle 
-                cx="250" cy="180" r="3" fill="#35A7DF"
-                animate={{ scale: [1, 1.4, 1] }} 
-                transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
-              />
-
-              {/* Definitions */}
-              <defs>
-                <linearGradient id="goldBurgundyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#FF533D" />
-                  <stop offset="100%" stopColor="#FFC219" />
-                </linearGradient>
-              </defs>
-            </motion.svg>
+              
+              {/* Subtle glass overlay corner details */}
+              <div style={{
+                position: 'absolute',
+                bottom: '1.5rem',
+                left: '1.5rem',
+                backgroundColor: 'rgba(30, 42, 56, 0.85)',
+                border: '1px solid rgba(255, 194, 25, 0.3)',
+                padding: '0.5rem 1rem',
+                borderRadius: '6px',
+                color: '#FFFFFF',
+                fontSize: '0.75rem',
+                fontWeight: 600,
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase',
+                backdropFilter: 'blur(4px)'
+              }}>
+                The Alabaster Tech-Linen
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
