@@ -136,7 +136,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
             </p>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
               <Mail size={16} style={{ color: '#FFC219' }} />
-              info@triweft.com
+              hello@triweft.com
             </p>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <Globe size={16} style={{ color: '#FFC219' }} />

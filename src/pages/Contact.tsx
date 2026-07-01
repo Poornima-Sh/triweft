@@ -192,7 +192,7 @@ export const Contact: React.FC = () => {
               </div>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                 <Mail style={{ color: '#FF533D', flexShrink: 0 }} />
-                <p style={{ color: '#555555', fontSize: '0.9rem' }}>info@triweft.com</p>
+                <p style={{ color: '#555555', fontSize: '0.9rem' }}>hello@triweft.com</p>
               </div>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                 <Phone style={{ color: '#1E2A38', flexShrink: 0 }} />
