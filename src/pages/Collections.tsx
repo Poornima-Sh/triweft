@@ -3,36 +3,23 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ShoppingBag, Eye, X, Check } from 'lucide-react';
 
 export const Collections: React.FC = () => {
-  const [filter, setFilter] = useState<'all' | 'gowns' | 'suits' | 'textiles'>('all');
+  const [filter, setFilter] = useState<'all' | 'suits' | 'shirts' | 'outerwear'>('all');
   const [selectedProduct, setSelectedProduct] = useState<typeof products[0] | null>(null);
   const [selectedSize, setSelectedSize] = useState<string>('');
   const [orderSuccess, setOrderSuccess] = useState<boolean>(false);
 
   const filterItems = [
-    { id: 'all', label: 'All Showcase' },
-    { id: 'gowns', label: 'Couture Gowns' },
+    { id: 'all', label: 'All Menswear' },
     { id: 'suits', label: 'Bespoke Suits' },
-    { id: 'textiles', label: 'Technical Textures' },
+    { id: 'shirts', label: 'Luxury Shirts' },
+    { id: 'outerwear', label: 'Technical Blazers' },
   ];
 
   const products = [
     {
       id: 1,
-      title: "The Aurelia Gala Gown",
-      category: "gowns",
-      price: "$8,500",
-      image: "/lookbook_gown.png",
-      description: "A signature masterpiece crafted from organic burgundy silk, intricately woven with 24k gold threads in a fluid scroll pattern.",
-      details: "This dress features our signature bio-silk blend which is fully compostable yet maintains a brilliant sheen. The golden accents are stitched using electro-conductive highlights that catch the light dynamically on movement.",
-      sizes: ["US 2", "US 4", "US 6", "US 8", "Bespoke"],
-      composition: "70% Organic Bio-Silk, 30% Metallic Gold Filament",
-      dye: "Zero-Water Bio-Dyeing (Burgundy Ochre)"
-    },
-    {
-      id: 2,
       title: "The Navy Sovereign Suit",
       category: "suits",
-      price: "$4,200",
       image: "/lookbook_suit.png",
       description: "An elite double-breasted suit tailored from custom multi-axial technical merino wool, featuring real gold-plated buttons.",
       details: "Woven on our digital micro-looms, the fabric features hydrophobic nanotechnology that repels water and stains, while allowing active thermal breathing. Perfect for global leadership and long travel flights.",
@@ -41,16 +28,26 @@ export const Collections: React.FC = () => {
       dye: "Eco-Friendly Deep Extraction Navy"
     },
     {
+      id: 2,
+      title: "The Alabaster Tech-Linen Shirt",
+      category: "shirts",
+      image: "/lookbook_white_shirt.png",
+      description: "A crisp, structured white shirt crafted from technical organic cotton blended with silver-ion filaments for anti-wrinkle and anti-microbial performance.",
+      details: "Integrating natural flax fibers with ultra-fine metallic thread cores, this white shirt boasts self-ironing elasticity and thermal regulating pores. Designed for effortless formal presentation.",
+      sizes: ["US 15", "US 15.5", "US 16", "US 16.5", "Bespoke"],
+      composition: "75% Organic Tech-Cotton, 20% Flax Linen, 5% Silver-Ion Filaments",
+      dye: "Natural Bleached Alabaster (Undyed)"
+    },
+    {
       id: 3,
-      title: "Abstract Weave Gold-Navy Filament",
-      category: "textiles",
-      price: "$280 / meter",
-      image: "/lookbook_textile.png",
-      description: "A close-up showcasing our advanced double-faced luxury textile weave. Featuring custom warp-weft densities.",
-      details: "This structural fabric is engineered for aerospace interior paneling and high-fashion structural silhouettes. It integrates natural linen fibers with carbon matrix cores for unparalleled tensile flex strength.",
-      sizes: ["10 Meters Min", "50 Meters Roll", "100 Meters Custom"],
-      composition: "60% Carbon Matrix core, 40% Flax Linen fibers",
-      dye: "Undyed Natural Blue & Gold Metallic"
+      title: "The Obsidian Tech Blazer",
+      category: "outerwear",
+      image: "/lookbook_blazer.png",
+      description: "A tailored, sleek obsidian jacket featuring multi-axial carbon matrix weaves and a minimal aesthetic.",
+      details: "Engineered for flexibility and extreme durability, this blazer uses composite yarn reinforcements in stress areas. Perfect for smart formal events and weather resilience.",
+      sizes: ["EU 48", "EU 50", "EU 52", "EU 56", "Bespoke"],
+      composition: "80% Carbon Matrix Blend, 20% Extra-Fine Tech Merino",
+      dye: "Eco-Friendly Charcoal Dye"
     }
   ];
 
@@ -192,15 +189,12 @@ export const Collections: React.FC = () => {
               {/* Text Info */}
                <div style={{ padding: '1.5rem', textAlign: 'left', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                 <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#FFC219', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem', display: 'block' }}>
-                  {product.category === 'gowns' ? 'Couture Gown' : product.category === 'suits' ? 'Bespoke Suit' : 'Technical Weave'}
+                  {product.category === 'suits' ? 'Bespoke Suit' : product.category === 'shirts' ? 'Luxury Shirt' : 'Technical Blazer'}
                 </span>
                 <h3 style={{ fontSize: '1.35rem', color: '#1E2A38', marginBottom: '0.5rem', flexGrow: 1 }}>
                   {product.title}
                 </h3>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem', borderTop: '1px solid rgba(30,42,56,0.06)', paddingTop: '1rem' }}>
-                  <span style={{ fontFamily: 'var(--font-body)', fontWeight: 600, color: '#FF533D' }}>
-                    {product.price}
-                  </span>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', marginTop: '1rem', borderTop: '1px solid rgba(30,42,56,0.06)', paddingTop: '1rem' }}>
                   <span style={{ color: '#1E2A38', fontSize: '0.8rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                     Explore Details <ShoppingBag size={12} />
                   </span>
@@ -288,12 +282,9 @@ export const Collections: React.FC = () => {
                   <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#FFC219', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Holding Collection
                   </span>
-                  <h2 style={{ fontSize: '2.2rem', marginTop: '0.25rem', marginBottom: '1rem', color: '#1E2A38' }}>
+                  <h2 style={{ fontSize: '2.2rem', marginTop: '0.25rem', marginBottom: '1.5rem', color: '#1E2A38' }}>
                     {selectedProduct.title}
                   </h2>
-                  <span style={{ fontSize: '1.4rem', color: '#FF533D', fontWeight: 600, display: 'block', marginBottom: '1.5rem' }}>
-                    {selectedProduct.price}
-                  </span>
 
                   <p style={{ color: '#555555', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1.5rem' }}>
                     {selectedProduct.description}
