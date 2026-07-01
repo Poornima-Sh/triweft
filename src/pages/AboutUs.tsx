@@ -39,12 +39,12 @@ export const AboutUs: React.FC = () => {
       highlight: "Former M&A VP at Barclays Capital | Wharton Finance Alum"
     },
     {
-      name: "Dr. Rohan Roy",
+      name: "Rohan Roy",
       role: "Co-Founder & Chief Innovation Officer",
       specialty: "Innovation & R&D",
       image: "/founder_innovation.png",
-      bio: "Rohan stayed in academia to complete his Ph.D. in Technical Materials. He leads the holding group’s laboratory and R&D pipelines, pushing textiles into composite sectors like aviation, smart wearables, and eco-fibers.",
-      highlight: "Holder of 7 Material Science Patents | Tech Innovation Lead"
+      bio: "Rohan headed sourcing divisions for multinational sourcing companies before heading innovation and incubation at India's top technology institute. He leads the holding group’s laboratory and R&D pipelines, pushing textiles into composite sectors like aviation, smart wearables, and eco-fibers.",
+      highlight: "Ex-Director of Innovation & Incubation | 12+ Years in Technical Sourcing"
     }
   ];
 
