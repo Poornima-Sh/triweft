@@ -29,14 +29,14 @@ export const Collections: React.FC = () => {
     },
     {
       id: 2,
-      title: "The Alabaster Tech-Linen Shirt",
+      title: "The ELS Cotton Sovereign Shirt",
       category: "shirts",
-      image: "/lookbook_white_shirt.png",
-      description: "A crisp, structured white shirt crafted from technical organic cotton blended with silver-ion filaments for anti-wrinkle and anti-microbial performance.",
-      details: "Integrating natural flax fibers with ultra-fine metallic thread cores, this white shirt boasts self-ironing elasticity and thermal regulating pores. Designed for effortless formal presentation.",
+      image: "/lookbook_els_white_shirt.png",
+      description: "An ultra-premium white shirt crafted from Extra-Long Staple (ELS) organic cotton blended with structural smart fibers.",
+      details: "Woven to a high-density count, this shirt has a natural silk-like luster, exceptional breathability, and integrated moisture-wicking technology. Designed for permanent crispness and effortless luxury wear.",
       sizes: ["US 15", "US 15.5", "US 16", "US 16.5", "Bespoke"],
-      composition: "75% Organic Tech-Cotton, 20% Flax Linen, 5% Silver-Ion Filaments",
-      dye: "Natural Bleached Alabaster (Undyed)"
+      composition: "95% Extra-Long Staple Organic Cotton, 5% Comfort Stretch Micro-filament",
+      dye: "Optic White bio-bleaching (Undyed)"
     },
     {
       id: 3,

@@ -164,8 +164,8 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
               }}
             >
               <img
-                src="/lookbook_white_shirt.png"
-                alt="Triweft Sovereign White Shirt"
+                src="/lookbook_els_white_shirt.png"
+                alt="Triweft Sovereign ELS Cotton White Shirt"
                 style={{
                   width: '100%',
                   height: '100%',
@@ -190,7 +190,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
                 textTransform: 'uppercase',
                 backdropFilter: 'blur(4px)'
               }}>
-                The Alabaster Tech-Linen
+                Ultra Premium ELS Cotton
               </div>
             </motion.div>
           </motion.div>
