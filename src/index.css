@@ -3,19 +3,20 @@
    ========================================================================== */
 
 :root {
-  /* Color Palette */
-  --color-primary: #1A2A40;     /* Deep Navy Blue */
-  --color-secondary: #7A1F2B;   /* Rich Burgundy */
-  --color-highlight: #D4A017;   /* Golden Ochre */
+  /* Color Palette - Updated to match logo */
+  --color-primary: #1E2A38;     /* Deep Navy Slate */
+  --color-secondary: #FF533D;   /* Vibrant Coral Red */
+  --color-highlight: #FFC219;   /* Vibrant Golden Yellow */
+  --color-blue: #35A7DF;        /* Vibrant Celestial Blue */
   --color-bg: #F8F6F2;          /* Soft Ivory */
   --color-bg-light: #EFEFEF;    /* Alternating Light Gray */
-  --color-text: #333333;         /* Charcoal Gray */
+  --color-text: #4A4A4A;        /* Neutral Charcoal Gray */
   
   /* Additional UI Palette */
   --color-white: #FFFFFF;
-  --color-overlay: rgba(26, 42, 64, 0.04);
-  --color-border: rgba(26, 42, 64, 0.12);
-  --color-border-hover: rgba(212, 160, 23, 0.5);
+  --color-overlay: rgba(30, 42, 56, 0.04);
+  --color-border: rgba(30, 42, 56, 0.12);
+  --color-border-hover: rgba(255, 194, 25, 0.5);
   
   /* Font Stacks */
   --font-heading: 'Cormorant Garamond', serif;

@@ -29,21 +29,21 @@ export const VisionBrand: React.FC = () => {
       title: "Technical Spinning",
       desc: "Engineered spinning techniques where threads are blended with nano-carbon structures or copper wires, creating highly conductive, smart yarns.",
       icon: <Cpu size={24} />,
-      color: "#1A2A40"
+      color: "#1E2A38"
     },
     {
       id: 3,
       title: "Precision Weaving",
       desc: "Using automated digital looms that weave customized multi-axial warp-wefts, creating aerospace grade strength or ultra-lightweight luxury textiles.",
       icon: <RefreshCw size={24} />,
-      color: "#D4A017"
+      color: "#FFC219"
     },
     {
       id: 4,
       title: "Atelier Design",
       desc: "Our luxury fashion designers translate the engineered textiles into premium silhouettes, marrying structural integrity with haute couture aesthetics.",
       icon: <Star size={24} />,
-      color: "#7A1F2B"
+      color: "#FF533D"
     },
     {
       id: 5,
@@ -76,7 +76,7 @@ export const VisionBrand: React.FC = () => {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
           
           <motion.div whileHover={{ y: -6 }} className="glass-card" style={{ textAlign: 'left' }}>
-            <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'rgba(122, 31, 43, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#7A1F2B', marginBottom: '1.5rem' }}>
+            <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'rgba(255, 83, 61, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#FF533D', marginBottom: '1.5rem' }}>
               <Star size={22} />
             </div>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Iconic Luxury</h3>
@@ -86,7 +86,7 @@ export const VisionBrand: React.FC = () => {
           </motion.div>
 
           <motion.div whileHover={{ y: -6 }} className="glass-card" style={{ textAlign: 'left' }}>
-            <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'rgba(26, 42, 64, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1A2A40', marginBottom: '1.5rem' }}>
+            <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'rgba(30, 42, 56, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1E2A38', marginBottom: '1.5rem' }}>
               <Cpu size={22} />
             </div>
             <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Technical Textiles</h3>

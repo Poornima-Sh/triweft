@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Globe, Layers } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: string;
@@ -60,10 +60,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
             padding: isScrolled ? '0.75rem 2rem' : '1.25rem 2.5rem',
             borderRadius: '12px',
             backgroundColor: isScrolled 
-              ? 'rgba(26, 42, 64, 0.95)' // Deep navy 
-              : 'rgba(26, 42, 64, 0.85)',
+              ? 'rgba(30, 42, 56, 0.95)' // Deep navy slate 
+              : 'rgba(30, 42, 56, 0.85)',
             border: isScrolled
-              ? '1px solid rgba(212, 160, 23, 0.3)' // Subtle gold border
+              ? '1px solid rgba(255, 194, 25, 0.3)' // Subtle gold border
               : '1px solid rgba(255, 255, 255, 0.08)',
             boxShadow: isScrolled
               ? '0 12px 30px rgba(0, 0, 0, 0.15)'
@@ -83,18 +83,15 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
               cursor: 'pointer' 
             }}
           >
-            <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-              <Layers style={{ color: '#D4A017', width: '28px', height: '28px' }} />
-              <Globe 
-                style={{ 
-                  color: '#7A1F2B', 
-                  width: '18px', 
-                  height: '18px', 
-                  position: 'absolute',
-                  bottom: '-2px',
-                  right: '-4px'
-                }} 
-              />
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <svg viewBox="0 0 100 100" width="36" height="36" style={{ display: 'block' }}>
+                {/* Yellow Line (Bottom) */}
+                <line x1="10" y1="75" x2="90" y2="75" stroke="#FFC219" strokeWidth="8" strokeLinecap="round" />
+                {/* Red Line (Right) */}
+                <line x1="40" y1="25" x2="85" y2="85" stroke="#FF533D" strokeWidth="8" strokeLinecap="round" />
+                {/* Blue Line (Left) */}
+                <line x1="15" y1="85" x2="60" y2="25" stroke="#35A7DF" strokeWidth="8" strokeLinecap="round" />
+              </svg>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <span 
@@ -114,7 +111,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
                   fontFamily: 'var(--font-body)', 
                   fontWeight: 500, 
                   fontSize: '0.65rem', 
-                  color: '#D4A017',
+                  color: '#FFC219',
                   letterSpacing: '0.25em',
                   marginTop: '2px',
                   lineHeight: 1
@@ -152,7 +149,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
                     fontWeight: 500,
                     letterSpacing: '0.05em',
                     textTransform: 'uppercase',
-                    color: isActive ? '#D4A017' : '#FFFFFF',
+                    color: isActive ? '#FFC219' : '#FFFFFF',
                     transition: 'color 0.3s ease',
                   }}
                 >
@@ -176,7 +173,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
                       layoutId="navActiveLine"
                       className="absolute bottom-0 left-4 right-4 h-0.5"
                       style={{
-                        backgroundColor: '#D4A017',
+                        backgroundColor: '#FFC219',
                         borderRadius: '2px',
                       }}
                     />
@@ -192,9 +189,9 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
               onClick={() => setCurrentPage('contact')}
               style={{
                 marginLeft: '1rem',
-                backgroundColor: '#7A1F2B',
+                backgroundColor: '#FF533D',
                 color: '#FFFFFF',
-                border: '1px solid #7A1F2B',
+                border: '1px solid #FF533D',
                 padding: '0.5rem 1.25rem',
                 fontSize: '0.8rem',
                 fontWeight: 600,
@@ -206,12 +203,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.borderColor = '#D4A017';
-                e.currentTarget.style.color = '#D4A017';
+                e.currentTarget.style.borderColor = '#FFC219';
+                e.currentTarget.style.color = '#FFC219';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#7A1F2B';
-                e.currentTarget.style.borderColor = '#7A1F2B';
+                e.currentTarget.style.backgroundColor = '#FF533D';
+                e.currentTarget.style.borderColor = '#FF533D';
                 e.currentTarget.style.color = '#FFFFFF';
               }}
             >
@@ -256,8 +253,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
               top: '90px',
               left: '1rem',
               right: '1rem',
-              backgroundColor: 'rgba(26, 42, 64, 0.98)',
-              border: '1px solid rgba(212, 160, 23, 0.2)',
+              backgroundColor: 'rgba(30, 42, 56, 0.98)',
+              border: '1px solid rgba(255, 194, 25, 0.2)',
               borderRadius: '12px',
               padding: '1.5rem',
               zIndex: 49,
@@ -286,8 +283,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
                       fontSize: '1rem',
                       fontWeight: 600,
                       textTransform: 'uppercase',
-                      color: isActive ? '#D4A017' : '#FFFFFF',
-                      borderLeft: isActive ? '3px solid #D4A017' : '3px solid transparent',
+                      color: isActive ? '#FFC219' : '#FFFFFF',
+                      borderLeft: isActive ? '3px solid #FFC219' : '3px solid transparent',
                       cursor: 'pointer',
                       transition: 'all 0.2s ease',
                     }}
@@ -302,7 +299,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) =
                   setIsMobileMenuOpen(false);
                 }}
                 style={{
-                  backgroundColor: '#7A1F2B',
+                  backgroundColor: '#FF533D',
                   color: '#FFFFFF',
                   border: 'none',
                   padding: '1rem',

@@ -67,8 +67,8 @@ export const InteractiveBackground: React.FC = () => {
         speed: Math.random() * 0.015 + 0.005,
         phase: Math.random() * Math.PI * 2,
         color: Math.random() > 0.6 
-          ? 'rgba(212, 160, 23, 0.08)' // Ochre gold
-          : 'rgba(26, 42, 64, 0.04)',  // Deep navy
+          ? 'rgba(255, 194, 25, 0.08)' // Yellow Gold
+          : 'rgba(30, 42, 56, 0.04)',  // Navy Slate
         thickness: Math.random() * 1.5 + 0.5,
       });
     }
@@ -152,8 +152,8 @@ export const InteractiveBackground: React.FC = () => {
           mouse.x, mouse.y, 0,
           mouse.x, mouse.y, mouse.radius * 0.8
         );
-        gradient.addColorStop(0, 'rgba(212, 160, 23, 0.03)');
-        gradient.addColorStop(0.5, 'rgba(122, 31, 43, 0.01)');
+         gradient.addColorStop(0, 'rgba(255, 194, 25, 0.03)');
+        gradient.addColorStop(0.5, 'rgba(255, 83, 61, 0.01)');
         gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
         ctx.fillStyle = gradient;
         ctx.beginPath();

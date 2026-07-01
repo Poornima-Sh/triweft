@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, Globe, Mail, ArrowRight } from 'lucide-react';
+import { Globe, Mail, ArrowRight } from 'lucide-react';
 
 interface FooterProps {
   setCurrentPage: (page: string) => void;
@@ -23,10 +23,10 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
   return (
     <footer
       style={{
-        backgroundColor: '#1A2A40',
+        backgroundColor: '#1E2A38',
         color: '#FFFFFF',
         padding: '5rem 0 2rem 0',
-        borderTop: '1px solid rgba(212, 160, 23, 0.2)',
+        borderTop: '1px solid rgba(255, 194, 25, 0.2)',
         position: 'relative',
         zIndex: 10,
       }}
@@ -53,12 +53,21 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
                 marginBottom: '1.5rem'
               }}
             >
-              <Layers style={{ color: '#D4A017', width: '28px', height: '28px' }} />
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <svg viewBox="0 0 100 100" width="28" height="28" style={{ display: 'block' }}>
+                  {/* Yellow Line (Bottom) */}
+                  <line x1="10" y1="75" x2="90" y2="75" stroke="#FFC219" strokeWidth="8" strokeLinecap="round" />
+                  {/* Red Line (Right) */}
+                  <line x1="40" y1="25" x2="85" y2="85" stroke="#FF533D" strokeWidth="8" strokeLinecap="round" />
+                  {/* Blue Line (Left) */}
+                  <line x1="15" y1="85" x2="60" y2="25" stroke="#35A7DF" strokeWidth="8" strokeLinecap="round" />
+                </svg>
+              </div>
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '1.3rem', letterSpacing: '0.05em' }}>
                   TRIWEFT
                 </span>
-                <span style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: '0.6rem', color: '#D4A017', letterSpacing: '0.2em' }}>
+                <span style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: '0.6rem', color: '#FFC219', letterSpacing: '0.2em' }}>
                   INNOVATIONS
                 </span>
               </div>
@@ -81,7 +90,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
 
           {/* Quick Links */}
           <div>
-            <h4 style={{ color: '#D4A017', fontFamily: 'var(--font-body)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', marginBottom: '1.5rem', textTransform: 'uppercase' }}>
+            <h4 style={{ color: '#FFC219', fontFamily: 'var(--font-body)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', marginBottom: '1.5rem', textTransform: 'uppercase' }}>
               Quick Links
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
@@ -100,7 +109,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
                       padding: 0,
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.color = '#D4A017';
+                      e.currentTarget.style.color = '#FFC219';
                       e.currentTarget.style.transform = 'translateX(5px)';
                     }}
                     onMouseLeave={(e) => {
@@ -117,7 +126,7 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
 
           {/* Contact Info */}
           <div>
-            <h4 style={{ color: '#D4A017', fontFamily: 'var(--font-body)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', marginBottom: '1.5rem', textTransform: 'uppercase' }}>
+            <h4 style={{ color: '#FFC219', fontFamily: 'var(--font-body)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', marginBottom: '1.5rem', textTransform: 'uppercase' }}>
               Corporate Office
             </h4>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginBottom: '1rem', lineHeight: 1.6 }}>
@@ -126,25 +135,25 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
               New Delhi, India
             </p>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-              <Mail size={16} style={{ color: '#D4A017' }} />
+              <Mail size={16} style={{ color: '#FFC219' }} />
               info@triweft.com
             </p>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Globe size={16} style={{ color: '#D4A017' }} />
+              <Globe size={16} style={{ color: '#FFC219' }} />
               www.triweft.com
             </p>
           </div>
 
           {/* Newsletter */}
           <div>
-            <h4 style={{ color: '#D4A017', fontFamily: 'var(--font-body)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', marginBottom: '1.5rem', textTransform: 'uppercase' }}>
+            <h4 style={{ color: '#FFC219', fontFamily: 'var(--font-body)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.1em', marginBottom: '1.5rem', textTransform: 'uppercase' }}>
               Newsletter
             </h4>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', marginBottom: '1.5rem', lineHeight: 1.6 }}>
               Subscribe to receive updates on our latest holding ventures, brand releases, and textile innovations.
             </p>
             {isSubscribed ? (
-              <div style={{ color: '#D4A017', fontSize: '0.9rem', fontWeight: 500 }}>
+              <div style={{ color: '#FFC219', fontSize: '0.9rem', fontWeight: 500 }}>
                 Thank you for subscribing!
               </div>
             ) : (
@@ -167,14 +176,14 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
                     outline: 'none',
                     transition: 'border-color 0.3s',
                   }}
-                  onFocus={(e) => e.currentTarget.style.borderColor = '#D4A017'}
+                  onFocus={(e) => e.currentTarget.style.borderColor = '#FFC219'}
                   onBlur={(e) => e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)'}
                 />
                 <button
                   type="submit"
                   aria-label="Subscribe"
                   style={{
-                    backgroundColor: '#7A1F2B',
+                    backgroundColor: '#FF533D',
                     border: 'none',
                     color: '#FFFFFF',
                     padding: '0 1.25rem',
@@ -185,8 +194,8 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
                     justifyContent: 'center',
                     transition: 'background-color 0.3s',
                   }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#D4A017'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7A1F2B'}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#FFC219'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#FF533D'}
                 >
                   <ArrowRight size={18} />
                 </button>
@@ -234,8 +243,8 @@ export const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
           text-decoration: none;
         }
         .social-icon-btn:hover {
-          background-color: #D4A017;
-          color: #1A2A40;
+          background-color: #FFC219;
+          color: #1E2A38;
           transform: translateY(-3px);
         }
         @media (min-width: 768px) {

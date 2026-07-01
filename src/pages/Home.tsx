@@ -142,9 +142,9 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
               transition={{ repeat: Infinity, duration: 80, ease: 'linear' }}
             >
               {/* Outer delicate orbits */}
-              <circle cx="200" cy="200" r="180" fill="none" stroke="rgba(26, 42, 64, 0.06)" strokeWidth="1" strokeDasharray="5 5" />
-              <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(122, 31, 43, 0.08)" strokeWidth="1" />
-              <circle cx="200" cy="200" r="100" fill="none" stroke="rgba(212, 160, 23, 0.12)" strokeWidth="1.5" strokeDasharray="10 15" />
+              <circle cx="200" cy="200" r="180" fill="none" stroke="rgba(30, 42, 56, 0.06)" strokeWidth="1" strokeDasharray="5 5" />
+              <circle cx="200" cy="200" r="140" fill="none" stroke="rgba(255, 83, 61, 0.08)" strokeWidth="1" />
+              <circle cx="200" cy="200" r="100" fill="none" stroke="rgba(255, 194, 25, 0.12)" strokeWidth="1.5" strokeDasharray="10 15" />
 
               {/* The "Triweft" Warp & Weft Morphed Gown/Suit wires */}
               <g>
@@ -162,7 +162,7 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
                       key={index}
                       d={`M 200 200 C ${cp2x} ${cp2y}, ${cp1x} ${cp1y}, ${x1} ${y1}`}
                       fill="none"
-                      stroke={index % 3 === 0 ? '#7A1F2B' : index % 3 === 1 ? '#1A2A40' : '#D4A017'}
+                      stroke={index % 3 === 0 ? '#FF533D' : index % 3 === 1 ? '#35A7DF' : '#FFC219'}
                       strokeWidth={index % 3 === 2 ? 1.5 : 1}
                       opacity="0.5"
                       animate={{
@@ -204,17 +204,17 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
 
               {/* Decorative nodes */}
               <motion.circle 
-                cx="200" cy="130" r="4" fill="#D4A017"
+                cx="200" cy="130" r="4" fill="#FFC219"
                 animate={{ scale: [1, 1.5, 1] }} 
                 transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
               />
               <motion.circle 
-                cx="150" cy="180" r="3" fill="#7A1F2B" 
+                cx="150" cy="180" r="3" fill="#FF533D" 
                 animate={{ scale: [1.3, 1, 1.3] }} 
                 transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
               />
               <motion.circle 
-                cx="250" cy="180" r="3" fill="#1A2A40"
+                cx="250" cy="180" r="3" fill="#35A7DF"
                 animate={{ scale: [1, 1.4, 1] }} 
                 transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }}
               />
@@ -222,8 +222,8 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
               {/* Definitions */}
               <defs>
                 <linearGradient id="goldBurgundyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#7A1F2B" />
-                  <stop offset="100%" stopColor="#D4A017" />
+                  <stop offset="0%" stopColor="#FF533D" />
+                  <stop offset="100%" stopColor="#FFC219" />
                 </linearGradient>
               </defs>
             </motion.svg>
@@ -240,67 +240,66 @@ export const Home: React.FC<HomeProps> = ({ setCurrentPage }) => {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
-            
-            {/* Pillar 1 */}
+                        {/* Pillar 1 */}
             <motion.div 
               whileHover={{ y: -8 }}
               className="glass-card" 
               style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', height: '100%' }}
             >
-              <div style={{ width: '48px', height: '48px', borderRadius: '8px', backgroundColor: 'rgba(122, 31, 43, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
-                <Compass style={{ color: '#7A1F2B' }} />
+              <div style={{ width: '48px', height: '48px', borderRadius: '8px', backgroundColor: 'rgba(255, 83, 61, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                <Compass style={{ color: '#FF533D' }} />
               </div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#1A2A40' }}>Luxury Brands</h3>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#1E2A38' }}>Luxury Brands</h3>
               <p style={{ color: '#666666', fontSize: '0.95rem', flexGrow: 1 }}>
                 Fostering an iconic portfolio of luxury fashion houses defined by fine craftsmanship, modern design systems, and rich legacy narrative.
               </p>
               <span 
                 onClick={() => setCurrentPage('collections')}
-                style={{ color: '#7A1F2B', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', marginTop: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}
+                style={{ color: '#FF533D', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', marginTop: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}
               >
                 View Collections <ArrowRight size={14} />
               </span>
             </motion.div>
 
-            {/* Pillar 2 */}
+             {/* Pillar 2 */}
             <motion.div 
               whileHover={{ y: -8 }}
               className="glass-card" 
               style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', height: '100%' }}
             >
-              <div style={{ width: '48px', height: '48px', borderRadius: '8px', backgroundColor: 'rgba(26, 42, 64, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
-                <ShieldCheck style={{ color: '#1A2A40' }} />
+              <div style={{ width: '48px', height: '48px', borderRadius: '8px', backgroundColor: 'rgba(30, 42, 56, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                <ShieldCheck style={{ color: '#1E2A38' }} />
               </div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#1A2A40' }}>Supply Integrity</h3>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#1E2A38' }}>Supply Integrity</h3>
               <p style={{ color: '#666666', fontSize: '0.95rem', flexGrow: 1 }}>
                 Revolutionizing supply chain loops with high technical weaves, traceable fiber technologies, and vertically integrated production hubs.
               </p>
               <span 
                 onClick={() => setCurrentPage('vision')}
-                style={{ color: '#1A2A40', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', marginTop: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}
+                style={{ color: '#1E2A38', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', marginTop: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}
               >
                 Our Supply Chain <ArrowRight size={14} />
               </span>
             </motion.div>
 
-            {/* Pillar 3 */}
+             {/* Pillar 3 */}
             <motion.div 
               whileHover={{ y: -8 }}
               className="glass-card" 
               style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', height: '100%' }}
             >
-              <div style={{ width: '48px', height: '48px', borderRadius: '8px', backgroundColor: 'rgba(212, 160, 23, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
-                <Cpu style={{ color: '#D4A017' }} />
+              <div style={{ width: '48px', height: '48px', borderRadius: '8px', backgroundColor: 'rgba(255, 194, 25, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem' }}>
+                <Cpu style={{ color: '#FFC219' }} />
               </div>
-              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#1A2A40' }}>Cross-Industry Ventures</h3>
+              <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#1E2A38' }}>Cross-Industry Ventures</h3>
               <p style={{ color: '#666666', fontSize: '0.95rem', flexGrow: 1 }}>
-                Incubating disruptive innovations beyond textiles—spanning aerospace composite weaves, eco bio-polymers, and advanced digital apparel tools.
+                Investing in disruptive innovations beyond textiles—spanning aerospace composite weaves, eco bio-polymers, and advanced digital apparel tools.
               </p>
               <span 
                 onClick={() => setCurrentPage('innovation')}
-                style={{ color: '#D4A017', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', marginTop: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}
+                style={{ color: '#FFC219', fontSize: '0.85rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase', marginTop: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}
               >
-                Explore Incubation <ArrowRight size={14} />
+                Explore Innovation <ArrowRight size={14} />
               </span>
             </motion.div>
 

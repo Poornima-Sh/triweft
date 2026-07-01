@@ -94,9 +94,9 @@ export const Collections: React.FC = () => {
             style={{
               padding: '0.6rem 1.5rem',
               borderRadius: '4px',
-              border: filter === item.id ? '1px solid #7A1F2B' : '1px solid rgba(26,42,64,0.12)',
-              backgroundColor: filter === item.id ? '#7A1F2B' : 'transparent',
-              color: filter === item.id ? '#FFFFFF' : '#1A2A40',
+              border: filter === item.id ? '1px solid #FF533D' : '1px solid rgba(30,42,56,0.12)',
+              backgroundColor: filter === item.id ? '#FF533D' : 'transparent',
+              color: filter === item.id ? '#FFFFFF' : '#1E2A38',
               fontFamily: 'var(--font-body)',
               fontSize: '0.8rem',
               fontWeight: 600,
@@ -107,14 +107,14 @@ export const Collections: React.FC = () => {
             }}
             onMouseEnter={(e) => {
               if (filter !== item.id) {
-                e.currentTarget.style.borderColor = '#D4A017';
-                e.currentTarget.style.color = '#D4A017';
+                e.currentTarget.style.borderColor = '#FFC219';
+                e.currentTarget.style.color = '#FFC219';
               }
             }}
             onMouseLeave={(e) => {
               if (filter !== item.id) {
-                e.currentTarget.style.borderColor = 'rgba(26,42,64,0.12)';
-                e.currentTarget.style.color = '#1A2A40';
+                e.currentTarget.style.borderColor = 'rgba(30,42,56,0.12)';
+                e.currentTarget.style.color = '#1E2A38';
               }
             }}
           >
@@ -146,8 +146,8 @@ export const Collections: React.FC = () => {
                 borderRadius: '12px',
                 overflow: 'hidden',
                 backgroundColor: '#FFFFFF',
-                border: '1px solid rgba(26,42,64,0.08)',
-                boxShadow: '0 8px 24px rgba(26,42,64,0.03)',
+                border: '1px solid rgba(30,42,56,0.08)',
+                boxShadow: '0 8px 24px rgba(30,42,56,0.03)',
                 display: 'flex',
                 flexDirection: 'column',
                 cursor: 'pointer'
@@ -174,7 +174,7 @@ export const Collections: React.FC = () => {
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(26, 42, 64, 0.4)',
+                    backgroundColor: 'rgba(30, 42, 56, 0.4)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -183,25 +183,25 @@ export const Collections: React.FC = () => {
                     zIndex: 2
                   }}
                 >
-                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1A2A40' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1E2A38' }}>
                     <Eye size={20} />
                   </div>
                 </div>
               </div>
 
               {/* Text Info */}
-              <div style={{ padding: '1.5rem', textAlign: 'left', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-                <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#D4A017', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem', display: 'block' }}>
+               <div style={{ padding: '1.5rem', textAlign: 'left', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#FFC219', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem', display: 'block' }}>
                   {product.category === 'gowns' ? 'Couture Gown' : product.category === 'suits' ? 'Bespoke Suit' : 'Technical Weave'}
                 </span>
-                <h3 style={{ fontSize: '1.35rem', color: '#1A2A40', marginBottom: '0.5rem', flexGrow: 1 }}>
+                <h3 style={{ fontSize: '1.35rem', color: '#1E2A38', marginBottom: '0.5rem', flexGrow: 1 }}>
                   {product.title}
                 </h3>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem', borderTop: '1px solid rgba(26,42,64,0.06)', paddingTop: '1rem' }}>
-                  <span style={{ fontFamily: 'var(--font-body)', fontWeight: 600, color: '#7A1F2B' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem', borderTop: '1px solid rgba(30,42,56,0.06)', paddingTop: '1rem' }}>
+                  <span style={{ fontFamily: 'var(--font-body)', fontWeight: 600, color: '#FF533D' }}>
                     {product.price}
                   </span>
-                  <span style={{ color: '#1A2A40', fontSize: '0.8rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                  <span style={{ color: '#1E2A38', fontSize: '0.8rem', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                     Explore Details <ShoppingBag size={12} />
                   </span>
                 </div>
@@ -221,7 +221,7 @@ export const Collections: React.FC = () => {
               left: 0,
               width: '100vw',
               height: '100vh',
-              backgroundColor: 'rgba(26, 42, 64, 0.75)',
+              backgroundColor: 'rgba(30, 42, 56, 0.75)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -245,7 +245,7 @@ export const Collections: React.FC = () => {
                 borderRadius: '16px',
                 overflowY: 'auto',
                 boxShadow: '0 25px 50px rgba(0,0,0,0.25)',
-                border: '1px solid rgba(212,160,23,0.3)',
+                border: '1px solid rgba(255, 194, 25, 0.3)',
                 position: 'relative'
               }}
             >
@@ -284,14 +284,14 @@ export const Collections: React.FC = () => {
                 </div>
 
                 {/* Right: Details Form */}
-                <div style={{ padding: '3rem 2.5rem', textAlign: 'left' }}>
-                  <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#D4A017', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                 <div style={{ padding: '3rem 2.5rem', textAlign: 'left' }}>
+                  <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#FFC219', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Holding Collection
                   </span>
-                  <h2 style={{ fontSize: '2.2rem', marginTop: '0.25rem', marginBottom: '1rem', color: '#1A2A40' }}>
+                  <h2 style={{ fontSize: '2.2rem', marginTop: '0.25rem', marginBottom: '1rem', color: '#1E2A38' }}>
                     {selectedProduct.title}
                   </h2>
-                  <span style={{ fontSize: '1.4rem', color: '#7A1F2B', fontWeight: 600, display: 'block', marginBottom: '1.5rem' }}>
+                  <span style={{ fontSize: '1.4rem', color: '#FF533D', fontWeight: 600, display: 'block', marginBottom: '1.5rem' }}>
                     {selectedProduct.price}
                   </span>
 
@@ -301,18 +301,18 @@ export const Collections: React.FC = () => {
 
                   <div style={{ borderTop: '1px solid rgba(0,0,0,0.08)', borderBottom: '1px solid rgba(0,0,0,0.08)', padding: '1.25rem 0', marginBottom: '2rem' }}>
                     <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.85rem', marginBottom: '0.75rem' }}>
-                      <span style={{ fontWeight: 600, color: '#1A2A40', width: '100px' }}>Composition:</span>
+                      <span style={{ fontWeight: 600, color: '#1E2A38', width: '100px' }}>Composition:</span>
                       <span style={{ color: '#666666' }}>{selectedProduct.composition}</span>
                     </div>
                     <div style={{ display: 'flex', gap: '1.5rem', fontSize: '0.85rem' }}>
-                      <span style={{ fontWeight: 600, color: '#1A2A40', width: '100px' }}>Dye Method:</span>
+                      <span style={{ fontWeight: 600, color: '#1E2A38', width: '100px' }}>Dye Method:</span>
                       <span style={{ color: '#666666' }}>{selectedProduct.dye}</span>
                     </div>
                   </div>
 
                   {/* Booking Selector Form */}
                   <form onSubmit={handleOrderSubmit}>
-                    <h4 style={{ fontSize: '0.85rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#1A2A40', marginBottom: '0.75rem' }}>
+                    <h4 style={{ fontSize: '0.85rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#1E2A38', marginBottom: '0.75rem' }}>
                       Select Size/Length
                     </h4>
                     <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
@@ -323,8 +323,8 @@ export const Collections: React.FC = () => {
                           onClick={() => setSelectedSize(s)}
                           style={{
                             padding: '0.5rem 1rem',
-                            border: selectedSize === s ? '2px solid #7A1F2B' : '1px solid rgba(0,0,0,0.15)',
-                            backgroundColor: selectedSize === s ? '#7A1F2B' : 'transparent',
+                            border: selectedSize === s ? '2px solid #FF533D' : '1px solid rgba(0,0,0,0.15)',
+                            backgroundColor: selectedSize === s ? '#FF533D' : 'transparent',
                             color: selectedSize === s ? '#FFFFFF' : '#333333',
                             borderRadius: '4px',
                             cursor: 'pointer',
@@ -349,7 +349,7 @@ export const Collections: React.FC = () => {
                         disabled={!selectedSize}
                         style={{
                           width: '100%',
-                          backgroundColor: selectedSize ? '#7A1F2B' : '#CCCCCC',
+                          backgroundColor: selectedSize ? '#FF533D' : '#CCCCCC',
                           color: '#FFFFFF',
                           border: 'none',
                           padding: '1.1rem',

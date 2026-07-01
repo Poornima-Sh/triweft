@@ -11,7 +11,7 @@ export const Contact: React.FC = () => {
     { id: 'delhi', name: 'New Delhi HQ', x: 280, y: 195, role: 'Corporate HQ & Spin Labs' },
     { id: 'milan', name: 'Milan Studio', x: 200, y: 135, role: 'Couture Design Atelier' },
     { id: 'tokyo', name: 'Tokyo Lab', x: 345, y: 155, role: 'Bio-Polymer Material Lab' },
-    { id: 'sf', name: 'San Francisco Office', x: 75, y: 145, role: 'Tech Wearables Incubator' },
+    { id: 'sf', name: 'San Francisco Office', x: 75, y: 145, role: 'Tech Wearables Lab' },
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -75,11 +75,11 @@ export const Contact: React.FC = () => {
                   initial={{ scale: 0 }}
                   animate={{ scale: [0, 1.2, 1] }}
                   transition={{ duration: 0.6, ease: 'easeOut' }}
-                  style={{ color: '#2E7D32', marginBottom: '1.5rem' }}
+                  style={{ color: '#00A86B', marginBottom: '1.5rem' }}
                 >
                   <CheckCircle size={64} />
                 </motion.div>
-                <h3 style={{ fontSize: '2rem', color: '#1A2A40', marginBottom: '1rem' }}>Message Received</h3>
+                <h3 style={{ fontSize: '2rem', color: '#1E2A38', marginBottom: '1rem' }}>Message Received</h3>
                 <p style={{ color: '#666666', fontSize: '0.95rem', lineHeight: 1.6, maxWidth: '300px' }}>
                   Thank you for connecting with Triweft Innovations. Our team will respond to your inquiry within 24 hours.
                 </p>
@@ -94,7 +94,7 @@ export const Contact: React.FC = () => {
                         width: '8px',
                         height: '8px',
                         borderRadius: i % 2 === 0 ? '50%' : '2px',
-                        backgroundColor: i % 3 === 0 ? '#D4A017' : i % 3 === 1 ? '#7A1F2B' : '#1A2A40',
+                        backgroundColor: i % 3 === 0 ? '#FFC219' : i % 3 === 1 ? '#FF533D' : '#35A7DF',
                         left: '50%',
                         top: '50%',
                       }}
@@ -112,7 +112,7 @@ export const Contact: React.FC = () => {
             ) : null}
           </AnimatePresence>
 
-          <h2 style={{ fontSize: '1.8rem', marginBottom: '2rem', color: '#1A2A40' }}>Send a Message</h2>
+          <h2 style={{ fontSize: '1.8rem', marginBottom: '2rem', color: '#1E2A38' }}>Send a Message</h2>
           
           <form onSubmit={handleSubmit}>
             <div className="form-group">
@@ -181,21 +181,21 @@ export const Contact: React.FC = () => {
           
           {/* Info cards */}
           <div className="glass-card" style={{ padding: '2rem' }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: '#1A2A40' }}>Global Headquarters</h3>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', color: '#1E2A38' }}>Global Headquarters</h3>
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
-                <MapPin style={{ color: '#D4A017', marginTop: '4px', flexShrink: 0 }} />
+                <MapPin style={{ color: '#FFC219', marginTop: '4px', flexShrink: 0 }} />
                 <p style={{ color: '#555555', fontSize: '0.9rem', lineHeight: 1.5 }}>
                   Triweft Tower, 12th Floor, Innovation District, Sector 5, New Delhi, India
                 </p>
               </div>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                <Mail style={{ color: '#7A1F2B', flexShrink: 0 }} />
+                <Mail style={{ color: '#FF533D', flexShrink: 0 }} />
                 <p style={{ color: '#555555', fontSize: '0.9rem' }}>info@triweft.com</p>
               </div>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                <Phone style={{ color: '#1A2A40', flexShrink: 0 }} />
+                <Phone style={{ color: '#1E2A38', flexShrink: 0 }} />
                 <p style={{ color: '#555555', fontSize: '0.9rem' }}>+91 11 4059 8833</p>
               </div>
             </div>
@@ -217,7 +217,7 @@ export const Contact: React.FC = () => {
 
           {/* SVG Map Section */}
           <div>
-            <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem', color: '#1A2A40' }}>Global Operations Map</h3>
+            <h3 style={{ fontSize: '1.3rem', marginBottom: '1rem', color: '#1E2A38' }}>Global Operations Map</h3>
             <div className="map-container">
               
               {/* Custom abstract vector styled map */}
@@ -231,14 +231,14 @@ export const Contact: React.FC = () => {
                 <path d="M210 120 Q240 120 270 140 T290 190 T240 210 T210 160 Z" fill="#2E4057" opacity="0.3" /> {/* Africa */}
                 <path d="M240 90 Q300 80 340 100 T360 140 T310 180 T260 130 Z" fill="#2E4057" opacity="0.3" /> {/* Asia */}
                 <path d="M330 180 Q360 170 380 190 T350 220 Z" fill="#2E4057" opacity="0.3" /> {/* Australia */}
-
+ 
                 {/* Connections (Threads) radiating between office nodes */}
                 <AnimatePresence>
                   {activeLocation && (
                     <motion.g initial={{ opacity: 0 }} animate={{ opacity: 0.4 }} exit={{ opacity: 0 }}>
-                      <line x1="280" y1="195" x2="200" y2="135" stroke="#D4A017" strokeWidth="1" strokeDasharray="3 3" />
-                      <line x1="280" y1="195" x2="345" y2="155" stroke="#D4A017" strokeWidth="1" strokeDasharray="3 3" />
-                      <line x1="280" y1="195" x2="75" y2="145" stroke="#D4A017" strokeWidth="1" strokeDasharray="3 3" />
+                      <line x1="280" y1="195" x2="200" y2="135" stroke="#FFC219" strokeWidth="1" strokeDasharray="3 3" />
+                      <line x1="280" y1="195" x2="345" y2="155" stroke="#FFC219" strokeWidth="1" strokeDasharray="3 3" />
+                      <line x1="280" y1="195" x2="75" y2="145" stroke="#FFC219" strokeWidth="1" strokeDasharray="3 3" />
                     </motion.g>
                   )}
                 </AnimatePresence>
@@ -251,13 +251,13 @@ export const Contact: React.FC = () => {
                     onClick={() => setActiveLocation(activeLocation === loc.id ? null : loc.id)}
                   >
                     {/* Ripple circle */}
-                    <circle cx={loc.x} cy={loc.y} r="8" fill={loc.id === 'delhi' ? '#7A1F2B' : '#D4A017'} opacity="0.4">
+                    <circle cx={loc.x} cy={loc.y} r="8" fill={loc.id === 'delhi' ? '#FF533D' : '#FFC219'} opacity="0.4">
                       <animate attributeName="r" values="4;12;4" dur="2.5s" repeatCount="indefinite" />
                       <animate attributeName="opacity" values="0.6;0;0.6" dur="2.5s" repeatCount="indefinite" />
                     </circle>
 
                     {/* Central dot */}
-                    <circle cx={loc.x} cy={loc.y} r="4" fill={loc.id === 'delhi' ? '#7A1F2B' : '#D4A017'} />
+                    <circle cx={loc.x} cy={loc.y} r="4" fill={loc.id === 'delhi' ? '#FF533D' : '#FFC219'} />
                   </g>
                 ))}
               </svg>
@@ -269,8 +269,8 @@ export const Contact: React.FC = () => {
                   bottom: '1rem',
                   left: '1rem',
                   right: '1rem',
-                  backgroundColor: 'rgba(26, 42, 64, 0.95)',
-                  border: '1px solid rgba(212,160,23,0.3)',
+                  backgroundColor: 'rgba(30, 42, 56, 0.95)',
+                  border: '1px solid rgba(255, 194, 25, 0.3)',
                   borderRadius: '6px',
                   padding: '0.75rem 1rem',
                   color: '#FFFFFF',
@@ -283,7 +283,7 @@ export const Contact: React.FC = () => {
               >
                 {activeLocation && (
                   <div>
-                    <strong style={{ color: '#D4A017', display: 'block', fontSize: '0.9rem' }}>
+                    <strong style={{ color: '#FFC219', display: 'block', fontSize: '0.9rem' }}>
                       {locations.find(l => l.id === activeLocation)?.name}
                     </strong>
                     <span style={{ color: 'rgba(255,255,255,0.8)' }}>
@@ -306,15 +306,15 @@ export const Contact: React.FC = () => {
           width: 40px;
           height: 40px;
           border-radius: 50%;
-          border: 1px solid rgba(26,42,64,0.12);
-          color: #1A2A40;
+          border: 1px solid rgba(30,42,56,0.12);
+          color: #1E2A38;
           background-color: transparent;
           transition: all 0.3s ease;
         }
         .social-connect-btn:hover {
-          background-color: #7A1F2B;
+          background-color: #FF533D;
           color: #FFFFFF;
-          border-color: #7A1F2B;
+          border-color: #FF533D;
           transform: translateY(-2px);
         }
       `}</style>

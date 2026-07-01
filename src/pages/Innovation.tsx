@@ -25,7 +25,7 @@ export const Innovation: React.FC = () => {
       stage: "Series A / Prototype Validation",
       partners: "Indian Institute of Science (IISc), Aerospace Division",
       icon: <Plane size={24} />,
-      color: "#1A2A40"
+      color: "#1E2A38"
     },
     {
       id: 2,
@@ -47,7 +47,7 @@ export const Innovation: React.FC = () => {
       stage: "Beta Testing / FDA Approval Pending",
       partners: "Hindustan Medical Group & TechSense Sensors",
       icon: <Cpu size={24} />,
-      color: "#7A1F2B"
+      color: "#FF533D"
     },
     {
       id: 4,
@@ -56,9 +56,9 @@ export const Innovation: React.FC = () => {
       description: "A digital neural net system predicting thread counts and structural layouts for optimal performance.",
       details: "LoomAI analyses target mechanical constraints (elasticity, weight limit) and outputs the precise weaving math. It reduces physical testing iteration times by 85%, accelerating product lifecycles.",
       stage: "Proprietary Software Integration",
-      partners: "Triweft Tech Incubator",
+      partners: "Triweft Innovation Laboratories",
       icon: <Layers size={24} />,
-      color: "#D4A017"
+      color: "#FFC219"
     }
   ];
 
@@ -73,9 +73,9 @@ export const Innovation: React.FC = () => {
       {/* Title */}
       <motion.div variants={itemVariants} className="section-title-wrap">
         <span className="section-subtitle">Ventures & Research</span>
-        <h1 className="section-title">Incubation & Investments</h1>
+        <h1 className="section-title">Innovation & Investments</h1>
         <p style={{ maxWidth: '750px', margin: '2rem auto 0 auto', color: '#666666', fontSize: '1.1rem', lineHeight: 1.7, textAlign: 'center' }}>
-          Triweft invests 15% of holding revenues back into our scientific laboratories. We partner with elite global research institutes to incubate cross-industry startups that extend the science of textiles into other industrial domains.
+          Triweft invests 15% of holding revenues back into our scientific laboratories. We partner with elite global research institutes to pioneer cross-industry technologies that extend the science of textiles into other industrial domains.
         </p>
       </motion.div>
 
@@ -96,9 +96,9 @@ export const Innovation: React.FC = () => {
                   cursor: 'pointer',
                   display: 'flex',
                   flexDirection: 'column',
-                  border: isExpanded ? `1px solid ${proj.color}` : '1px solid rgba(26, 42, 64, 0.12)',
+                  border: isExpanded ? `1px solid ${proj.color}` : '1px solid rgba(30, 42, 56, 0.12)',
                   background: isExpanded ? 'rgba(255, 255, 255, 0.85)' : 'rgba(255, 255, 255, 0.45)',
-                  boxShadow: isExpanded ? '0 20px 40px rgba(0, 0, 0, 0.08)' : '0 10px 30px rgba(26, 42, 64, 0.04)',
+                  boxShadow: isExpanded ? '0 20px 40px rgba(0, 0, 0, 0.08)' : '0 10px 30px rgba(30, 42, 56, 0.04)',
                 }}
               >
                 {/* Header elements */}
@@ -108,7 +108,7 @@ export const Innovation: React.FC = () => {
                       width: '44px',
                       height: '44px',
                       borderRadius: '8px',
-                      backgroundColor: isExpanded ? proj.color : 'rgba(26, 42, 64, 0.05)',
+                      backgroundColor: isExpanded ? proj.color : 'rgba(30, 42, 56, 0.05)',
                       color: isExpanded ? '#FFFFFF' : proj.color,
                       display: 'flex',
                       alignItems: 'center',
@@ -156,7 +156,7 @@ export const Innovation: React.FC = () => {
                           <span style={{ fontSize: '0.8rem', color: '#666666' }}>{proj.stage}</span>
                         </div>
                         <div>
-                          <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#1A2A40', display: 'block' }}>Incubation & Collaboration Partners</span>
+                          <span style={{ fontSize: '0.75rem', fontWeight: 600, color: '#1A2A40', display: 'block' }}>Research & Collaboration Partners</span>
                           <span style={{ fontSize: '0.8rem', color: '#666666' }}>{proj.partners}</span>
                         </div>
                       </div>
@@ -189,7 +189,7 @@ export const Innovation: React.FC = () => {
       {/* R&D Labs Highlight */}
       <section className="section-alt" style={{ borderRadius: '12px', padding: '5rem 3rem', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '3rem', alignItems: 'center', textAlign: 'left' }}>
         <div>
-          <span className="section-subtitle">Labs & Incubation</span>
+          <span className="section-subtitle">Labs & Research</span>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>Join the Weave Lab</h2>
           <p style={{ color: '#666666', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '2rem' }}>
             We actively collaborate with engineering teams, fashion labels, and polymer labs worldwide. If you have a patent, dynamic research project, or innovative venture looking for holding support, capital investments, and scaling networks, connect with us.
@@ -198,21 +198,21 @@ export const Innovation: React.FC = () => {
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-          <div style={{ backgroundColor: '#FFFFFF', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(26,42,64,0.08)' }}>
-            <span style={{ fontSize: '2.2rem', fontFamily: 'var(--font-heading)', color: '#7A1F2B', fontWeight: 600, display: 'block' }}>15%</span>
+          <div style={{ backgroundColor: '#FFFFFF', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(30, 42, 56, 0.08)' }}>
+            <span style={{ fontSize: '2.2rem', fontFamily: 'var(--font-heading)', color: '#FF533D', fontWeight: 600, display: 'block' }}>15%</span>
             <span style={{ fontSize: '0.8rem', color: '#666666', fontWeight: 500, fontFamily: 'var(--font-body)', textTransform: 'uppercase' }}>Revenues to R&D</span>
           </div>
-          <div style={{ backgroundColor: '#FFFFFF', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(26,42,64,0.08)' }}>
-            <span style={{ fontSize: '2.2rem', fontFamily: 'var(--font-heading)', color: '#1A2A40', fontWeight: 600, display: 'block' }}>24+</span>
+          <div style={{ backgroundColor: '#FFFFFF', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(30, 42, 56, 0.08)' }}>
+            <span style={{ fontSize: '2.2rem', fontFamily: 'var(--font-heading)', color: '#1E2A38', fontWeight: 600, display: 'block' }}>24+</span>
             <span style={{ fontSize: '0.8rem', color: '#666666', fontWeight: 500, fontFamily: 'var(--font-body)', textTransform: 'uppercase' }}>Research Patents</span>
           </div>
-          <div style={{ backgroundColor: '#FFFFFF', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(26,42,64,0.08)' }}>
-            <span style={{ fontSize: '2.2rem', fontFamily: 'var(--font-heading)', color: '#D4A017', fontWeight: 600, display: 'block' }}>4</span>
+          <div style={{ backgroundColor: '#FFFFFF', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(30, 42, 56, 0.08)' }}>
+            <span style={{ fontSize: '2.2rem', fontFamily: 'var(--font-heading)', color: '#FFC219', fontWeight: 600, display: 'block' }}>4</span>
             <span style={{ fontSize: '0.8rem', color: '#666666', fontWeight: 500, fontFamily: 'var(--font-body)', textTransform: 'uppercase' }}>Global Labs</span>
           </div>
-          <div style={{ backgroundColor: '#FFFFFF', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(26,42,64,0.08)' }}>
+          <div style={{ backgroundColor: '#FFFFFF', padding: '1.5rem', borderRadius: '8px', border: '1px solid rgba(30, 42, 56, 0.08)' }}>
             <span style={{ fontSize: '2.2rem', fontFamily: 'var(--font-heading)', color: '#333333', fontWeight: 600, display: 'block' }}>8</span>
-            <span style={{ fontSize: '0.8rem', color: '#666666', fontWeight: 500, fontFamily: 'var(--font-body)', textTransform: 'uppercase' }}>Incubated Startups</span>
+            <span style={{ fontSize: '0.8rem', color: '#666666', fontWeight: 500, fontFamily: 'var(--font-body)', textTransform: 'uppercase' }}>Funded Ventures</span>
           </div>
         </div>
       </section>

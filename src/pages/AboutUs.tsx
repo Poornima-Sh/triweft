@@ -41,10 +41,10 @@ export const AboutUs: React.FC = () => {
     {
       name: "Dr. Rohan Roy",
       role: "Co-Founder & Chief Innovation Officer",
-      specialty: "Innovation & Incubation",
+      specialty: "Innovation & R&D",
       image: "/founder_innovation.png",
       bio: "Rohan stayed in academia to complete his Ph.D. in Technical Materials. He leads the holding group’s laboratory and R&D pipelines, pushing textiles into composite sectors like aviation, smart wearables, and eco-fibers.",
-      highlight: "Holder of 7 Material Science Patents | Tech Incubator Lead"
+      highlight: "Holder of 7 Material Science Patents | Tech Innovation Lead"
     }
   ];
 
@@ -71,7 +71,7 @@ export const AboutUs: React.FC = () => {
     {
       year: "2024",
       title: "Luxury Brand Holding launch",
-      description: "Launch of the premium fashion incubator division and successful acquisition of three boutique couture labels, repositioning them for global scales.",
+      description: "Launch of the premium fashion holding division and successful acquisition of three boutique couture labels, repositioning them for global scales.",
       icon: <Sparkles size={20} />
     }
   ];
@@ -109,8 +109,8 @@ export const AboutUs: React.FC = () => {
                 borderRadius: '12px',
                 overflow: 'hidden',
                 backgroundColor: '#FFFFFF',
-                boxShadow: '0 10px 30px rgba(26, 42, 64, 0.05)',
-                border: '1px solid rgba(26, 42, 64, 0.08)',
+                boxShadow: '0 10px 30px rgba(30, 42, 56, 0.05)',
+                border: '1px solid rgba(30, 42, 56, 0.08)',
                 display: 'flex',
                 flexDirection: 'column',
                 height: '100%',
@@ -131,13 +131,13 @@ export const AboutUs: React.FC = () => {
                   left: 0,
                   width: '100%',
                   height: '100%',
-                  background: 'linear-gradient(to top, rgba(26, 42, 64, 0.9) 0%, rgba(26, 42, 64, 0.2) 60%, transparent 100%)',
+                  background: 'linear-gradient(to top, rgba(30, 42, 56, 0.9) 0%, rgba(30, 42, 56, 0.2) 60%, transparent 100%)',
                   zIndex: 1
                 }} />
                 
                 {/* Overlay Name on Image bottom */}
                 <div style={{ position: 'absolute', bottom: '1.5rem', left: '1.5rem', right: '1.5rem', zIndex: 2, textAlign: 'left' }}>
-                  <span style={{ color: '#D4A017', fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+                  <span style={{ color: '#FFC219', fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
                     {founder.specialty}
                   </span>
                   <h3 style={{ color: '#FFFFFF', fontSize: '1.8rem', marginTop: '0.2rem' }}>
@@ -154,8 +154,8 @@ export const AboutUs: React.FC = () => {
                 <p style={{ color: '#666666', fontSize: '0.9rem', lineHeight: 1.6, flexGrow: 1, marginBottom: '1.5rem' }}>
                   {founder.bio}
                 </p>
-                <div style={{ borderTop: '1px solid rgba(26, 42, 64, 0.08)', paddingTop: '1rem' }}>
-                  <span style={{ display: 'block', fontSize: '0.75rem', color: '#7A1F2B', fontWeight: 600, fontFamily: 'var(--font-body)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                <div style={{ borderTop: '1px solid rgba(30, 42, 56, 0.08)', paddingTop: '1rem' }}>
+                  <span style={{ display: 'block', fontSize: '0.75rem', color: '#FF533D', fontWeight: 600, fontFamily: 'var(--font-body)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     Key Highlight
                   </span>
                   <span style={{ fontSize: '0.8rem', color: '#333333', marginTop: '0.2rem', display: 'block' }}>
@@ -216,16 +216,16 @@ export const AboutUs: React.FC = () => {
                     padding: '2rem',
                     borderRadius: '8px',
                     backgroundColor: '#FFFFFF',
-                    border: '1px solid rgba(26, 42, 64, 0.08)',
-                    boxShadow: '0 8px 24px rgba(26, 42, 64, 0.03)',
+                    border: '1px solid rgba(30, 42, 56, 0.08)',
+                    boxShadow: '0 8px 24px rgba(30, 42, 56, 0.03)',
                     textAlign: isLeft ? 'right' : 'left',
                   }}
                   className="timeline-content-box"
                 >
-                  <span style={{ fontSize: '1.8rem', fontFamily: 'var(--font-heading)', color: '#7A1F2B', fontWeight: 600, display: 'block', marginBottom: '0.5rem' }}>
+                  <span style={{ fontSize: '1.8rem', fontFamily: 'var(--font-heading)', color: '#FF533D', fontWeight: 600, display: 'block', marginBottom: '0.5rem' }}>
                     {m.year}
                   </span>
-                  <h4 style={{ fontSize: '1.25rem', color: '#1A2A40', marginBottom: '0.75rem' }}>
+                  <h4 style={{ fontSize: '1.25rem', color: '#1E2A38', marginBottom: '0.75rem' }}>
                     {m.title}
                   </h4>
                   <p style={{ color: '#666666', fontSize: '0.85rem', lineHeight: 1.6 }}>
@@ -241,12 +241,12 @@ export const AboutUs: React.FC = () => {
                   width: '40px',
                   height: '40px',
                   borderRadius: '50%',
-                  backgroundColor: '#1A2A40',
-                  border: '3px solid #D4A017',
+                  backgroundColor: '#1E2A38',
+                  border: '3px solid #FFC219',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#D4A017',
+                  color: '#FFC219',
                   boxShadow: '0 4px 10px rgba(0,0,0,0.15)',
                   zIndex: 2
                 }}
@@ -262,7 +262,7 @@ export const AboutUs: React.FC = () => {
 
       <style>{`
         .timeline-item:hover .timeline-node {
-          background-color: #7A1F2B !important;
+          background-color: #FF533D !important;
           border-color: #FFFFFF !important;
           color: #FFFFFF !important;
           transform: translateX(-50%) scale(1.1) !important;
